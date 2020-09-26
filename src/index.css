@@ -1,13 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap");
+
+html {
+  height: 100vh;
+}
 body {
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-size: 1.4em;
+  font-family: -apple-system, BlinkMacSystemFont, "Archivo Narrow", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+}
+
+.mainBar {
+  color: #ffffff;
+  height: 96.5vh;
+  display: inline-flex;
+  border: 2px solid #303f9f;
+  border-radius: 5px;
+  margin-left: 0;
+  transition: background-color 0.4s ease, border 0.4s ease, visibility 0.6s,
+    margin-left 0.4s;
+  background-color: #536dfe;
+}
+
+.mainBar.hide {
+  transition: background-color 0.4s ease, border 0.4s ease, visibility 0.6s,
+    margin-left 0.4s;
+  margin-left: -100px;
+  border: none;
+  background-color: white;
+}
+
+.mainBar li {
+  margin-right: 50px;
+}
+
+.mainBar ul {
+  list-style: none;
+}
+
+.expandList {
+  background-color: #536dfe;
+}
+
+.main {
+  width: 100%;
+}
+
+.time {
+  color: #ffffff;
+  background-color: #212121;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.components-field {
+  display: flex;
 }
