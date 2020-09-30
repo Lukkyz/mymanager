@@ -13,7 +13,7 @@ class Add extends React.Component {
     });
   }
   render() {
-    return <div onClick={this.clicked}>Add</div>;
+    return <div onClick={this.clicked}>Pomodoro </div>;
   }
 }
 

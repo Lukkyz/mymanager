@@ -1,5 +1,4 @@
 import React from "react";
-import Draggable from "react-draggable";
 
 class Pomodoro extends React.Component {
   constructor(props) {
@@ -61,19 +60,15 @@ class Pomodoro extends React.Component {
     this.play();
   }
   render() {
-    const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
     return (
-      <Draggable bounds="parent" {...dragHandlers}>
-        <div>
-          <h3>Pomodoro</h3>
-          <span>
-            {Math.floor(this.state.time / 60)} : {this.state.time % 60}
-          </span>
-          <button onClick={this.click}>
-            {this.state.running ? "Pause" : "Lancer"}
-          </button>
+      <div className="component pomodoro">
+        <div className="pomodoro-time">
+          {Math.floor(this.state.time / 60)} : {this.state.time % 60}
         </div>
-      </Draggable>
+        <button onClick={this.click}>
+          {this.state.running ? "PAUSE" : "LANCER"}
+        </button>
+      </div>
     );
   }
 }

@@ -1,8 +1,13 @@
 import { connect } from "react-redux";
 import ComponentsField from "../components/ComponentsField";
+import { removeComponent } from "../actions/componentAction";
 
 const mapStateToProps = (state) => ({
   components: state.components,
 });
 
-export default connect(mapStateToProps, null)(ComponentsField);
+const mapDispatchToProps = (dispatch) => ({
+  remove: (id) => dispatch(removeComponent(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ComponentsField);

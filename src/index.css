@@ -30,7 +30,7 @@ code {
 
 .mainBar {
   color: #ffffff;
-  height: 96.5vh;
+  height: auto;
   display: inline-flex;
   border: 2px solid #303f9f;
   border-radius: 5px;
@@ -75,4 +75,63 @@ code {
 
 .components-field {
   display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.window,
+.delete {
+  border: 1px solid black;
+}
+
+.window {
+  background-color: #757575;
+}
+
+.delete {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.window {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px 0 5px;
+}
+
+.component {
+  font-size: 3em;
+}
+
+.widget {
+  width: 20vw;
+  height: 20vh;
+}
+
+.pomodoro {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(48, 63, 144, 1) 60%,
+    rgba(68, 138, 255, 1) 100%
+  );
+}
+.pomodoro-time {
+  color: white;
+}
+
+h5 {
+  margin: 0;
+}
+
+.delete {
+  padding: 1px;
+  background-color: red;
+}
+
+button {
+  border-radius: 5px;
+  background-color: white;
+  border: none;
 }

@@ -10,7 +10,7 @@ const components = (state = [], action) => {
         },
       ];
     case REMOVE_COMPONENT:
-      return state.filter((component) => component !== action.id);
+      return state.filter((component) => component.id !== action.id);
     default:
       return state;
   }
